@@ -1,0 +1,7 @@
+
+CREATE TABLE IF NOT EXISTS `links` (
+  `insertime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `nick` varchar(25) NOT NULL,
+  `target` varchar(255) NOT NULL,
+  `line` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
