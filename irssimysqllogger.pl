@@ -14,7 +14,7 @@ $VERSION = "1.0";
         url         => "http://elderx.fi",
     );
 
-$dsn = 'DBI:mysql:TAULUN_NIMI:DATABASE_HOST';
+$dsn = 'DBI:mysql:KANNAN_NIMI:DATABASE_HOST';
 $db_user_name = 'USERNAME';
 $db_password = 'PASSWORD';
 
