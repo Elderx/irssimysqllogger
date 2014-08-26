@@ -41,7 +41,7 @@ sub cmd_topic {
 sub db_insert {
         my ($nick, $target, $line)=@_;
         unless ($dbh->ping) {
-                $dbh = DBI->connect($dsn, $db_user_name, $db_password);
+                $dbh = DBI->connect($dsn, $db_user_name, $db_password), {mysql_enable_utf8 => 1};
                 Irssi::print("Connected again");
         }
         my $sql="insert into links (insertime, nick, target,line) values (NOW()".",". $dbh->quote($nick) ."," . $dbh->quote($target) ."," . $dbh->quote($d) .")";
