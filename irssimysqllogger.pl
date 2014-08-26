@@ -18,7 +18,7 @@ $dsn = 'DBI:mysql:KANNAN_NIMI:DATABASE_HOST';
 $db_user_name = 'USERNAME';
 $db_password = 'PASSWORD';
 
-my $dbh = DBI->connect($dsn, $db_user_name, $db_password);
+my $dbh = DBI->connect($dsn, $db_user_name, $db_password, {mysql_enable_utf8 => 1});
 
 sub cmd_logline {
         my ($server, $data, $nick, $mask, $target) = @_;
